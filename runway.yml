@@ -1,0 +1,6 @@
+cuda: 10.0
+entrypoint: python runway_model.py
+python: 3.6
+build_steps:
+  - if_cpu: pip install tensorflow
+  - if_gpu: pip install tensorflow-gpu
